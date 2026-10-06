@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cherop Antony Muigai provides professional virtual assistant services, creator operations support, sponsorship outreach, and executive assistance for creators and businesses.">
+    <title>Cherop Antony Muigai | Virtual Assistant & Creator Operations Portal</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2a4a',
+                            900: '#091c33',
+                            950: '#051120',
+                        },
+                        gold: {
+                            400: '#f3c649',
+                            500: '#d4af37',
+                            600: '#b89220',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .hero-pattern {
+            background-color: #0f2a4a;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-navy-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center flex-wrap justify-center md:justify-start gap-3 md:gap-6">
+                <a href="mailto:amtonymuraga84@gmail.com" class="flex items-center hover:text-gold-400 transition-colors"><i class="fas fa-envelope text-gold-500 mr-2"></i> amtonymuraga84@gmail.com</a>
+                <a href="tel:+254746134183" class="flex items-center hover:text-gold-400 transition-colors"><i class="fas fa-phone-alt text-gold-500 mr-2"></i> +254 746 134183</a>
+                <a href="https://wa.me/254746134183?text=Hello%20Cherop%20Antony%20Muigai%2C%20I%27m%20interested%20in%20your%20Virtual%20Assistant%20services." target="_blank" rel="noopener noreferrer" class="flex items-center text-emerald-400 hover:text-emerald-300 transition-colors"><i class="fab fa-whatsapp mr-2"></i> WhatsApp Me</a>
+                <span class="hidden sm:inline-flex items-center text-emerald-400"><i class="fas fa-clock mr-1"></i> Mon - Fri: 8:00 AM - 6:00 PM EAT</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-slate-400">Follow Cherop Antony:</span>
+                <a href="https://web.facebook.com/profile.php?id=100087783937783" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors" aria-label="Facebook profile">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="https://x.com/CAntoMuigai" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors" aria-label="X profile">
+                    <i class="fab fa-x-twitter text-sm"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center space-x-3 group" aria-label="Go to home section">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 border-2 border-gold-500 flex items-center justify-center text-gold-400 font-heading font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        CAM
+                    </div>
+                    <div>
+                        <span class="block font-heading font-bold text-lg text-navy-900 tracking-tight leading-none">CHEROP ANTONY MUIGAI</span>
+                        <span class="text-xs font-semibold text-gold-600 tracking-wider uppercase">Virtual Assistant & Creator Hub</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700" aria-label="Main navigation">
+                    <a href="#home" class="text-navy-900 font-semibold hover:text-gold-600 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-navy-900 transition-colors">About</a>
+                    <a href="#services" class="hover:text-navy-900 transition-colors">VA Services & Courses</a>
+                    <a href="#calculator" class="hover:text-navy-900 transition-colors">Revenue Estimator</a>
+                    <a href="#testimonials" class="hover:text-navy-900 transition-colors">Case Studies</a>
+                    <a href="#contact" class="hover:text-navy-900 transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button type="button" onclick="openModal()" class="bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg hover:from-gold-400 hover:to-gold-500 transition-all">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        <span>Book Consultation</span>
+                    </button>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-md text-slate-600 hover:text-navy-900 hover:bg-slate-100 focus:outline-none" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#home" class="mobile-nav-link block py-2 text-navy-900 font-semibold border-b border-slate-100">Home</a>
+            <a href="#about" class="mobile-nav-link block py-2 text-slate-700 hover:text-navy-900 border-b border-slate-100">About</a>
+            <a href="#services" class="mobile-nav-link block py-2 text-slate-700 hover:text-navy-900 border-b border-slate-100">VA Services & Courses</a>
+            <a href="#calculator" class="mobile-nav-link block py-2 text-slate-700 hover:text-navy-900 border-b border-slate-100">Revenue Estimator</a>
+            <a href="#testimonials" class="mobile-nav-link block py-2 text-slate-700 hover:text-navy-900 border-b border-slate-100">Case Studies</a>
+            <a href="#contact" class="mobile-nav-link block py-2 text-slate-700 hover:text-navy-900">Contact</a>
+            <button type="button" onclick="openModal()" class="w-full mt-2 bg-gold-500 text-navy-950 font-bold py-2.5 rounded-lg text-center shadow">
+                Book Consultation
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero-pattern text-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-navy-800/80 border border-gold-500/30 text-gold-400 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide backdrop-blur-sm">
+                        <i class="fas fa-award text-gold-400"></i> Smart Academy Inspired Professional VA Excellence
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+                        Empowering Content Creators & Executives with <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-300 to-amber-200">World-Class Virtual Assistance</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Lifelong professional support, brand collaboration management, and streamlined creator operations for YouTubers, podcasters, digital entrepreneurs, and corporate executives worldwide.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#services" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-gold-500/20 text-center transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-th-large"></i> Explore VA Services & Modules
+                        </a>
+                        <button type="button" onclick="openModal()" class="border-2 border-slate-300 hover:border-gold-400 text-white hover:text-gold-400 font-semibold px-7 py-3.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-handshake"></i> Book a Free Consultation
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-navy-800/80 mt-8">
+                        <div>
+                            <div class="text-2xl font-bold font-heading text-gold-400">99.4%</div>
+                            <div class="text-xs text-slate-400">Client Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold font-heading text-gold-400">150+</div>
+                            <div class="text-xs text-slate-400">Deals Negotiated</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold font-heading text-gold-400">24/7</div>
+                            <div class="text-xs text-slate-400">Executive Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-navy-800 to-navy-900 border border-navy-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+                        <div class="absolute -top-3 -right-3 bg-gold-500 text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full shadow">
+                            VERIFIED VA
+                        </div>
+
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-16 h-16 rounded-full bg-slate-700 border-2 border-gold-400 flex items-center justify-center text-2xl font-bold text-white shadow">
+                                <i class="fas fa-user-shield text-gold-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">Cherop Antony Muigai</h3>
+                                <p class="text-xs text-gold-400">Lead Creator Operations Consultant</p>
+                                <p class="text-xs text-slate-400 mt-0.5"><i class="fas fa-map-marker-alt text-red-400 mr-1"></i> Nairobi, Kenya</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 border-t border-navy-800 pt-5">
+                            <div class="flex items-start gap-3 text-sm text-slate-200">
+                                <i class="fas fa-check-circle text-gold-400 mt-1"></i>
+                                <span>Cold outreach & brand deal negotiation expert</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-200">
+                                <i class="fas fa-check-circle text-gold-400 mt-1"></i>
+                                <span>Inbox zero & high-level executive calendar control</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-200">
+                                <i class="fas fa-check-circle text-gold-400 mt-1"></i>
+                                <span>End-to-end creator workflow automation & publishing</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-slate-400">
+                            <span>Social Profiles:</span>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://web.facebook.com/profile.php?id=100087783937783" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-gold-400"><i class="fab fa-facebook"></i> Facebook</a>
+                                <a href="https://x.com/CAntoMuigai" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-gold-400"><i class="fab fa-x-twitter"></i> @CAntoMuigai</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 bg-gold-400/10 px-3 py-1 rounded-full">About Me</span>
+                <h2 class="font-heading text-3xl font-extrabold text-navy-900 mt-3">Helping creators and executives build calm, efficient systems</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 text-gold-600 flex items-center justify-center mb-4">
+                        <i class="fas fa-briefcase text-lg"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Work Style</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">I help ambitious creators, founders, and professionals clear bottlenecks, improve workflows, and create better systems for sustainable growth.</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 text-gold-600 flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-lg"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Growth Focus</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">From outreach and partner acquisition to daily operations and content publishing, I keep the moving parts organized so you can focus on impact.</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/15 text-gold-600 flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-lg"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Reliable Support</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Every engagement is built around clarity, communication, and dependable execution so your brand or business runs smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 bg-gold-400/10 px-3 py-1 rounded-full">Core Competencies</span>
+                <h2 class="font-heading text-3xl font-extrabold text-navy-900 mt-3">Professional Virtual Assistant Services & Modules</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Structured support tailored to scale your digital presence, increase brand deal revenue, and reclaim time for strategic work.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden border border-slate-200 group">
+                    <div class="bg-navy-900 p-6 text-white relative">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Module 01</span>
+                        <h3 class="font-heading font-bold text-lg text-white mt-1">Brand Collaboration & Sponsorship Outreach</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Cold pitching to target brands, PR outreach management, media kit presentation, and securing lucrative sponsorship contracts for creators.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Custom Pitch Deck Optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Sponsor CRM & Follow-ups</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Rate Negotiation & Terms</li>
+                        </ul>
+                        <button type="button" onclick="showDetails('Brand Collaboration & Sponsorship', 'Comprehensive support including media kit design, cold emailing brand managers, negotiating deal rates, and maintaining the entire sponsorship pipeline from first outreach to signed contract.')" class="mt-2 bg-navy-900 text-white font-semibold py-2.5 rounded-lg text-xs hover:bg-navy-800 transition-colors">
+                            Learn More & Plan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden border border-slate-200 group">
+                    <div class="bg-navy-900 p-6 text-white relative">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Module 02</span>
+                        <h3 class="font-heading font-bold text-lg text-white mt-1">Creator Operations & Admin Support</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Achieve inbox zero, seamless calendar management, client invoicing, contractor oversight, and operational workflow setup.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Executive Inbox Triage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Calendar & Booking Systems</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Invoicing & Expense Tracking</li>
+                        </ul>
+                        <button type="button" onclick="showDetails('Creator Operations & Admin Support', 'Offload day-to-day administrative burdens. Includes managing creator inquiries, scheduling guests for podcasts, tracking deliverables, and keeping operational workflows organized and efficient.')" class="mt-2 bg-navy-900 text-white font-semibold py-2.5 rounded-lg text-xs hover:bg-navy-800 transition-colors">
+                            Learn More & Plan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden border border-slate-200 group">
+                    <div class="bg-navy-900 p-6 text-white relative">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Module 03</span>
+                        <h3 class="font-heading font-bold text-lg text-white mt-1">Content Publishing & Workflow</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            YouTube SEO, metadata tagging, podcast distribution, thumbnail management, caption formatting, and audience comment moderation.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Multi-Platform Uploads</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> SEO Optimization & Tags</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Community Engagement</li>
+                        </ul>
+                        <button type="button" onclick="showDetails('Content Publishing & Workflow', 'Full content lifecycle management. Upload scheduling across YouTube, Spotify, Apple Podcasts, and social platforms, while keeping metadata, captions, and publishing calendars consistent and on time.')" class="mt-2 bg-navy-900 text-white font-semibold py-2.5 rounded-lg text-xs hover:bg-navy-800 transition-colors">
+                            Learn More & Plan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden border border-slate-200 group">
+                    <div class="bg-navy-900 p-6 text-white relative">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Module 04</span>
+                        <h3 class="font-heading font-bold text-lg text-white mt-1">Executive Virtual Assistance</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            High-level support for C-suite executives, founders, and busy professionals including travel arrangements, research, and CRM updates.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Travel & Itinerary Planning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Market & Lead Research</li>
+                            <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> CRM & Data Hygiene</li>
+                        </ul>
+                        <button type="button" onclick="showDetails('Executive Virtual Assistance', 'Tailored remote executive assistance for business leaders. Flight and accommodation arrangements, calendar conflict resolution, research, CRM updates, and strategic follow-through for busy professionals.')" class="mt-2 bg-navy-900 text-white font-semibold py-2.5 rounded-lg text-xs hover:bg-navy-800 transition-colors">
+                            Learn More & Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-16 bg-navy-900 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy-800/80 border border-gold-500/30 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full">Interactive Creator Tool</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold mt-2">Sponsorship Deal & Potential Estimator</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm mt-1">Estimate potential monthly brand sponsorship income when leveraging Cherop Antony Muigai’s VA outreach services.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6 bg-navy-950 p-6 rounded-xl border border-navy-800">
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-300 mb-2">
+                                <span>Average Views / Audience per Episode</span>
+                                <span id="views-val" class="text-gold-400 font-bold">25,000 views</span>
+                            </div>
+                            <input type="range" id="views-slider" min="5000" max="200000" step="5000" value="25000" class="w-full accent-gold-500 h-2 bg-slate-700 rounded-lg cursor-pointer">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-300 mb-2">
+                                <span>Monthly Uploads / Episodes</span>
+                                <span id="episodes-val" class="text-gold-400 font-bold">4 Videos</span>
+                            </div>
+                            <input type="range" id="episodes-slider" min="1" max="12" step="1" value="4" class="w-full accent-gold-500 h-2 bg-slate-700 rounded-lg cursor-pointer">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-2">Primary Niche / Industry</label>
+                            <select id="niche-select" class="w-full bg-navy-900 border border-slate-700 text-slate-200 rounded-lg p-2.5 text-xs focus:border-gold-500 outline-none">
+                                <option value="25">Tech & Software ($25 CPM Avg)</option>
+                                <option value="35">Finance & Business ($35 CPM Avg)</option>
+                                <option value="20">Lifestyle, Vlogs & Fitness ($20 CPM Avg)</option>
+                                <option value="30">Education & Professional Development ($30 CPM Avg)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-navy-800 to-navy-950 p-6 rounded-xl border-2 border-gold-500/50 text-center flex flex-col justify-between space-y-6">
+                        <div>
+                            <span class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Estimated Monthly Brand Deal Revenue</span>
+                            <div id="revenue-result" class="text-3xl sm:text-4xl font-extrabold font-heading text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-200 mt-2">
+                                $2,500 - $3,500
+                            </div>
+                            <p class="text-xs text-slate-400 mt-2">Based on standard 60-second integration rates with VA proactive cold pitch support.</p>
+                        </div>
+
+                        <div class="space-y-3 pt-4 border-t border-navy-800">
+                            <div class="flex justify-between text-xs text-slate-300">
+                                <span>Estimated Pitch Outreach Emails / Mo:</span>
+                                <span class="font-bold text-gold-400">120+ Contacts</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-300">
+                                <span>Contract & Terms Review:</span>
+                                <span class="font-bold text-emerald-400">Included</span>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="openModal()" class="w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold py-3 rounded-lg text-xs shadow-md transition-all">
+                            Claim Your Free Brand Strategy Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 bg-gold-400/10 px-3 py-1 rounded-full">Success Stories</span>
+                <h2 class="font-heading text-3xl font-extrabold text-navy-900 mt-3">Trusted by Top Digital Content Creators & Executives</h2>
+                <p class="text-slate-600 mt-2 text-sm">See how Cherop Antony Muigai transforms operational bottlenecks into streamlined growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed">
+                            "Working with Antony changed my channel's trajectory. He took over brand outreach and secured two annual sponsorship deals that paid 3x my previous rate!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center font-bold text-xs">
+                            DK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">David K.</h4>
+                            <p class="text-xs text-slate-500">Tech Reviewer (120k YouTube Subscribers)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed">
+                            "Antony is absolute gold for administrative and podcast publishing. Inbox zero was a dream until he came in and structured my daily calendar and editing workflow."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-bold text-xs">
+                            SM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">Sarah M.</h4>
+                            <p class="text-xs text-slate-500">Business Podcast Host</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed">
+                            "The response rate on cold pitches skyrocketed after Antony redesigned our media deck and streamlined our contact sequence. Highly recommended VA service!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center font-bold text-xs">
+                            JR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">James R.</h4>
+                            <p class="text-xs text-slate-500">Managing Director, Media Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600 bg-gold-400/10 px-3 py-1 rounded-full">Get In Touch</span>
+                        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mt-2">Let's Discuss Your Virtual Assistant Needs</h2>
+                        <p class="text-slate-600 text-xs sm:text-sm mt-2">Ready to scale your content, organize your operations, or land high-paying brand deals?</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">Consultant Name</h4>
+                                <p class="text-xs text-slate-600">Cherop Antony Muigai</p>
+                            </div>
+                        </div>
+
+                        <a href="mailto:amtonymuraga84@gmail.com" class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-gold-400 hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">Email</h4>
+                                <p class="text-xs text-slate-600">amtonymuraga84@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+254746134183" class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-gold-400 hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">Phone</h4>
+                                <p class="text-xs text-slate-600">+254 746 134183</p>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/254746134183?text=Hello%20Cherop%20Antony%20Muigai%2C%20I%27m%20interested%20in%20your%20Virtual%20Assistant%20services." target="_blank" rel="noopener noreferrer" class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-emerald-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-lg">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">WhatsApp</h4>
+                                <p class="text-xs text-slate-600">Chat directly with Cherop</p>
+                                <p class="text-xs text-emerald-600 font-semibold mt-1">Start WhatsApp Chat <i class="fas fa-arrow-up-right-from-square ml-1"></i></p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">Social Media & Direct Profiles</h4>
+                                <div class="flex flex-wrap gap-3 mt-1 text-xs">
+                                    <a href="https://web.facebook.com/profile.php?id=100087783937783" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:underline font-semibold">
+                                        <i class="fab fa-facebook mr-1"></i> Facebook Profile
+                                    </a>
+                                    <a href="https://x.com/CAntoMuigai" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:underline font-semibold">
+                                        <i class="fab fa-x-twitter mr-1"></i> @CAntoMuigai
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs text-navy-900">Turnaround Time</h4>
+                                <p class="text-xs text-slate-600">Inquiries answered within 12-24 business hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-lg">
+                    <div class="mb-5 rounded-xl bg-emerald-50 border border-emerald-200 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div>
+                            <p class="font-bold text-sm text-navy-900">Prefer WhatsApp?</p>
+                            <p class="text-xs text-slate-600">Connect with Cherop Antony directly for a faster response.</p>
+                        </div>
+                        <a href="https://wa.me/254746134183?text=Hello%20Cherop%20Antony%20Muigai%2C%20I%27d%20like%20to%20discuss%20your%20Virtual%20Assistant%20services." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-lg text-xs shadow-md transition-all whitespace-nowrap">
+                            <i class="fab fa-whatsapp text-base"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <h3 class="font-heading font-bold text-xl text-navy-900 mb-4">Send a Direct Message</h3>
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                                <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Service Interest</label>
+                                <select class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                                    <option>Brand Collaboration Outreach</option>
+                                    <option>Creator Operations Support</option>
+                                    <option>Content Publishing & SEO</option>
+                                    <option>Executive Virtual Assistance</option>
+                                    <option>Custom Monthly Retainer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Channel / Business Link</label>
+                                <input type="url" placeholder="https://" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Your Requirements / Message *</label>
+                            <textarea rows="4" required placeholder="Describe your channel or executive workflow needs..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-3 rounded-lg text-xs shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane text-gold-400"></i> Send Message
+                        </button>
+                    </form>
+
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-semibold text-center">
+                        <i class="fas fa-check-circle mr-1"></i> Thank you! Your message has been sent successfully. Cherop Antony Muigai will reach out shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-950 text-slate-400 text-xs py-12 border-t border-navy-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-3 md:col-span-1">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-lg bg-navy-900 border border-gold-500 flex items-center justify-center text-gold-400 font-bold text-sm">
+                            CAM
+                        </div>
+                        <span class="font-heading font-bold text-white text-sm">CHEROP ANTONY MUIGAI</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Dedicated Virtual Assistant & Creator Operations Specialist providing high-converting support and executive administration.
+                    </p>
+                    <div class="space-y-2 pt-2">
+                        <a href="mailto:amtonymuraga84@gmail.com" class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-envelope text-gold-500"></i> amtonymuraga84@gmail.com</a>
+                        <a href="tel:+254746134183" class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-phone-alt text-gold-500"></i> +254 746 134183</a>
+                        <a href="https://wa.me/254746134183?text=Hello%20Cherop%20Antony%20Muigai%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"><i class="fab fa-whatsapp"></i> WhatsApp: Chat with me</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">VA Services & Modules</a></li>
+                        <li><a href="#calculator" class="hover:text-gold-400 transition-colors">Revenue Estimator</a></li>
+                        <li><a href="#testimonials" class="hover:text-gold-400 transition-colors">Success Stories</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Official Profiles</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="https://web.facebook.com/profile.php?id=100087783937783" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors flex items-center gap-2">
+                                <i class="fab fa-facebook text-gold-500"></i> Facebook Official
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/CAntoMuigai" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors flex items-center gap-2">
+                                <i class="fab fa-x-twitter text-gold-500"></i> X (@CAntoMuigai)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Quality Assurance</h4>
+                    <p class="text-slate-400 leading-relaxed mb-3">
+                        Inspired by Smart Academy's online training and skills portal framework.
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-navy-900 border border-navy-800 p-2 rounded-lg text-slate-300">
+                        <i class="fas fa-shield-alt text-gold-400 text-lg"></i>
+                        <span>100% Verified Professional Standard</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-navy-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <p>&copy; 2026 Cherop Antony Muigai. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+            <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold" aria-label="Close booking modal">
+                &times;
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-gold-400/20 text-gold-600 rounded-full flex items-center justify-center mx-auto mb-2 text-xl">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-navy-900">Book Your Consultation</h3>
+                <p class="text-xs text-slate-600">Schedule a 1-on-1 strategy call with Cherop Antony Muigai.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name</label>
+                    <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs focus:ring-2 focus:ring-gold-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                    <input type="email" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs focus:ring-2 focus:ring-gold-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Consultation Date</label>
+                    <input type="date" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs focus:ring-2 focus:ring-gold-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold py-3 rounded-lg text-xs shadow transition-all">
+                    Confirm Consultation Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="details-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+            <button type="button" onclick="closeDetailsModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold" aria-label="Close details modal">
+                &times;
+            </button>
+            <h3 id="details-title" class="font-heading font-bold text-lg text-navy-900 mb-2">Module Title</h3>
+            <p id="details-body" class="text-xs text-slate-600 leading-relaxed mb-6">Module details text...</p>
+            <button type="button" onclick="closeDetailsModal(); openModal();" class="w-full bg-navy-900 text-white font-bold py-2.5 rounded-lg text-xs shadow hover:bg-navy-800 transition-colors">
+                Proceed to Book This Module
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', String(!isHidden));
+        }
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const viewsSlider = document.getElementById('views-slider');
+        const episodesSlider = document.getElementById('episodes-slider');
+        const nicheSelect = document.getElementById('niche-select');
+
+        const viewsVal = document.getElementById('views-val');
+        const episodesVal = document.getElementById('episodes-val');
+        const revenueResult = document.getElementById('revenue-result');
+
+        function calculateRevenue() {
+            const views = parseInt(viewsSlider.value, 10);
+            const episodes = parseInt(episodesSlider.value, 10);
+            const cpm = parseInt(nicheSelect.value, 10);
+
+            viewsVal.textContent = views.toLocaleString() + ' views';
+            episodesVal.textContent = episodes + (episodes === 1 ? ' Video' : ' Videos');
+
+            const estimatedPerVideo = (views / 1000) * cpm;
+            const lowEstimate = Math.round(estimatedPerVideo * episodes * 0.8);
+            const highEstimate = Math.round(estimatedPerVideo * episodes * 1.2);
+
+            revenueResult.textContent = `$${lowEstimate.toLocaleString()} - $${highEstimate.toLocaleString()}`;
+        }
+
+        viewsSlider.addEventListener('input', calculateRevenue);
+        episodesSlider.addEventListener('input', calculateRevenue);
+        nicheSelect.addEventListener('change', calculateRevenue);
+
+        function openModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        function showDetails(title, text) {
+            document.getElementById('details-title').textContent = title;
+            document.getElementById('details-body').textContent = text;
+            document.getElementById('details-modal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeDetailsModal() {
+            document.getElementById('details-modal').classList.add('hidden');
+            if (document.getElementById('booking-modal').classList.contains('hidden') && document.getElementById('details-modal').classList.contains('hidden')) {
+                document.body.classList.remove('modal-open');
+            }
+        }
+
+        document.getElementById('booking-modal').addEventListener('click', (event) => {
+            if (event.target.id === 'booking-modal') {
+                closeModal();
+            }
+        });
+
+        document.getElementById('details-modal').addEventListener('click', (event) => {
+            if (event.target.id === 'details-modal') {
+                closeDetailsModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+                closeDetailsModal();
+            }
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contact-form');
+            if (!form.reportValidity()) return;
+
+            form.reset();
+            const successMsg = document.getElementById('form-success');
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            alert('Consultation booking request received! We will confirm your date via email.');
+        }
+
+        calculateRevenue();
+    </script>
+</body>
+</html>
